@@ -4,30 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ignacio | Portfolio Programador</title>
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Swiper + FontAwesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assests/css/css.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-
-  <!-- Tu hoja de estilos -->
   <link rel="stylesheet" href="/assets/css/css.css">
-
-  <!-- Canvas Matrix -->
   <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full -z-10 opacity-10"></canvas>
 </head>
+
+  
 <body class="min-h-screen" class="snap-y snap-mandatory overflow-y-scroll h-screen">
 
-  <!-- Navbar -->
+
   <nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 py-4 px-6 shadow-lg">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-blue-400 neon-text">Ignacio</a>
@@ -47,7 +38,7 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+ 
   <section class="pt-32 pb-20 px-6 text-center">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-5xl md:text-7xl font-bold mb-4">
@@ -63,45 +54,15 @@
       
   </section>
 
-  <!-- Sobre mí -->
-  <!--<section id="about" class="py-24 px-6 flex justify-center" data-aos="fade-up" >
-    <div class="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl p-8 max-w-4xl w-full text-center text-gray-300 transition-transform transform hover:scale-[1.015]">
-      <h2 class="text-3xl font-bold mb-6 text-blue-400">// Sobre mí</h2>
 
-      <div class="flex flex-col items-center gap-6">
-        <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container">
-          <img src="assests/img/unnamed.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
-        </div>
-
-        <pre class="text-left bg-black/10 p-4 rounded-lg text-green-400 font-mono text-sm overflow-x-auto">
-> [BOOTING SEQUENCE...]
-> User: Ignacio González
-> Role: Full Stack Developer
-> Status: Online
-> Skills: JavaScript, React, Node.js, Python, Angular...
-> Goal: Crear soluciones funcionales 
-> Hobbies: Videojuegos, programar, leer
-        </pre>
-      </div>
-      <a href="/assests/cv/CV-IgnacioGonzalez.pdf" download class="group inline-block mt-6">
-  <span class="relative px-6 py-3 bg-blue-600 text-white rounded-lg transition-transform transform group-hover:scale-105">
-    <span class="absolute left-0 top-0 w-full h-full border-2 border-blue-400 rounded-lg group-hover:animate-pulse"></span>
-    Descargar CV
-  </span>
-</a>
-    </div>
-  </section>   -->
-
-<!-- Sobre mí -->
 <section id="about" class="py-20 px-6 relative" data-aos="fade-up">
   <div class="max-w-4xl mx-auto bg-gray-800/60 backdrop-blur border border-blue-500 rounded-xl shadow-xl p-8">
     <div class="flex flex-col md:flex-row gap-8 items-center">
-      <!-- Foto de perfil -->
+     
       <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container shrink-0">
-        <img src="assests/img/unnamed.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
+        <img src="assests/img/0416ee2a-67e4-452a-8f6d-5017180ab046.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
       </div>
 
-      <!-- Terminal -->
       <div class="flex-1">
         <div class="flex items-center mb-4">
           <h2 class="text-xl md:text-2xl font-bold text-blue-400">// Sobre mí</h2>
@@ -136,7 +97,7 @@
       
       <div class="logos-wrapper">
         <div class="logo-container">
-          <!-- Duplica este bloque para el efecto infinito -->
+          
           <div class="flex items-center px-4">
             <img src="assests/img/angular.svg" alt="Angular" class="h-16 mx-8">
             <img src="assests/img/css.svg" alt="CSS" class="h-16 mx-8">
@@ -148,7 +109,7 @@
             <img src="assests/img/php.svg" alt="PHP" class="h-16 mx-8">
             <img src="assests/img/icons8-python-94.png" alt="PHP" class="h-16 mx-8">
           </div>
-          <!-- Bloque duplicado -->
+      
           <div class="flex items-center px-4">
             <img src="assests/img/angular.svg" alt="Angular" class="h-16 mx-8">
             <img src="assests/img/css.svg" alt="CSS" class="h-16 mx-8">
@@ -165,14 +126,14 @@
     </div>
   </section>
 
- <!-- Sección Proyectos -->
+
 <section id="projects" class="py-20 px-6 bg-gray-800/30" data-aos="fade-up">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold mb-12 text-center">
       <span class="text-blue-400">//</span> Proyectos
     </h2>
     
-    <!-- Filtros (ahora sí funcionarán) -->
+    
     <div class="flex flex-wrap justify-center gap-4 mb-12">
       <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white cursor-pointer" data-filter="all">
         Todos
@@ -191,9 +152,8 @@
       </button>
     </div>
 
-    <!-- Grid de Proyectos -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Proyecto WEB -->
+      
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="web">
         <img src="https://via.placeholder.com/400x200" alt="E-commerce" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">E-commerce React</h3>
@@ -212,7 +172,7 @@
         </div>
       </div>
 
-      <!-- Proyecto AI -->
+      
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="ai">
         <img src="assests/img/imagen-chatbot.png" alt="Chatbot" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">Chatbot IA</h3>
@@ -231,7 +191,7 @@
         </div>
       </div>
 
-      <!-- Proyecto GAMES -->
+  
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="games">
         <img src="assests/img/snake.png" alt="Juego" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">Snake</h3>
@@ -293,7 +253,7 @@
 <br><br>
 
 
-  <!-- Footer -->
+
   <footer class="py-8 px-6 bg-gray-900/50">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-400 mb-4 md:mb-0">© 2025 Ignacio. Todos los derechos reservados.</p>
@@ -305,7 +265,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assests/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
