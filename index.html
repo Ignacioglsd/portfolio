@@ -55,34 +55,35 @@
   </section>
 
 
-<section id="about" class="py-20 px-6 relative" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto bg-gray-800/60 backdrop-blur border border-blue-500 rounded-xl shadow-xl p-8">
-    <div class="flex flex-col md:flex-row gap-8 items-center">
-     
-      <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container shrink-0">
-        <img src="assests/img/0416ee2a-67e4-452a-8f6d-5017180ab046.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
-      </div>
+<section id="about" class="py-32 px-6 relative z-10 text-blue-200 font-mono card-hover" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
 
-      <div class="flex-1">
-        <div class="flex items-center mb-4">
-          <h2 class="text-xl md:text-2xl font-bold text-blue-400">// Sobre mí</h2>
-        </div>
-        
-        <div class="bg-black/60 p-4 rounded-lg h-64 overflow-y-auto" id="terminal-output">
+    <!-- Imagen -->
+    <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container shrink-0">
+      <img src="assests/img/unnamed.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
+    </div>
+
+    <!-- Bloque de terminal -->
+    <div class="flex-1">
+      <div class="bg-gray-800/30 backdrop-blur-md border border-blue-500 rounded-xl shadow-xl p-6">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-blue-400">// Sobre mí</h2>
+
+        <div id="terminal-output" class="bg-black/70 p-4 rounded-lg max-h-96 overflow-y-auto text-sm leading-relaxed">
           <div class="text-blue-300">> [BOOTING SEQUENCE...]</div>
           <div class="text-blue-200">> User: Ignacio González</div>
           <div class="text-blue-200">> Role: Full Stack Developer</div>
           <div class="text-blue-200">> Skills: JavaScript, React, Node.js, Python, Angular...</div>
           <div class="text-blue-200">> Hobbies: Videojuegos, programar, leer, deporte</div>
-          <div class="text-blue-300">> Si quieres saber más, escribe <span class="text-white">help</span>.</div>
+          <div class="text-blue-300">> Si quieres saber más, escribe <span class="text-white font-bold">help</span>.</div>
         </div>
 
         <div class="mt-4 flex">
           <span class="text-blue-400 mr-2">>_</span>
-          <input id="terminal-input" type="text" class="w-full bg-transparent border-b border-blue-500 focus:outline-none text-blue-300 placeholder-blue-600" placeholder="Escribe un comando...">
+          <input id="terminal-input" type="text" class="w-full bg-transparent border-b border-blue-500 focus:outline-none text-blue-200 placeholder-blue-500" placeholder="Escribe un comando...">
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
