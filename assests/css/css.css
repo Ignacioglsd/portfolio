@@ -35,6 +35,7 @@
 /* Ajustes para la sección about */
 #about {
   background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+ box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
 }
 
 
