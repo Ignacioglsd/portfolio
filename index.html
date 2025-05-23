@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="assests/css/css.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/css.css">
-  <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full -z-10 opacity-10"></canvas>
+  <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full -z-10 opacity-30"></canvas>
 </head>
 
-  
+
+
 <body class="min-h-screen" class="snap-y snap-mandatory overflow-y-scroll h-screen">
 
 
@@ -29,6 +30,16 @@
         <a href="#contact" class="hover:text-blue-400 transition">Contacto</a>
       </div>
       <button id="toggle-dark" class="ml-4 text-white hover:text-blue-400">
+        
+<div class="ml-4 flex items-center gap-2">
+  <a href="index.html" class="text-white hover:text-blue-400 transition" title="Español">
+    <img src="https://flagcdn.com/es.svg" alt="ES" class="w-6 h-4 rounded shadow-sm">
+  </a>
+  <a href="en.html" class="text-white hover:text-blue-400 transition" title="English">
+    <img src="https://flagcdn.com/gb.svg" alt="EN" class="w-6 h-4 rounded shadow-sm">
+  </a>
+</div>
+
   <i class="fas fa-moon"></i>
 </button>
 
@@ -38,11 +49,11 @@
     </div>
   </nav>
 
- 
+
   <section class="pt-32 pb-20 px-6 text-center">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-5xl md:text-7xl font-bold mb-4">
-        Hola, soy <span class="text-blue-400 neon-text">&lt; Ignacio &gt;</span>
+        Hola, soy <span class="text-blue-400 neon-text">&lt;Ignacio&gt;</span>
       </h1>
       <p class="text-xl md:text-2xl text-gray-300 mb-8">
         Desarrollador Full Stack con pasión por crear soluciones innovadoras.
@@ -50,20 +61,16 @@
       <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
         Contáctame
       </a>
-      <br>
-      
+      <br>   
   </section>
-
 
 <section id="about" class="py-32 px-6 relative z-10 text-blue-200 font-mono card-hover" data-aos="fade-up">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
 
-    <!-- Imagen -->
     <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container shrink-0">
       <img src="assests/img/unnamed.jpg" alt="Ignacio" class="w-full h-full object-cover glitch-img">
     </div>
 
-    <!-- Bloque de terminal -->
     <div class="flex-1">
       <div class="bg-gray-800/30 backdrop-blur-md border border-blue-500 rounded-xl shadow-xl p-6">
         <h2 class="text-xl md:text-2xl font-bold mb-4 text-blue-400">// Sobre mí</h2>
@@ -89,7 +96,6 @@
 
 
 
-
   <section class="py-12" data-aos="fade-up">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl font-bold mb-8 text-center text-blue-400">
@@ -111,7 +117,7 @@
             <img src="assests/img/icons8-python-94.png" alt="PHP" class="h-16 mx-8">
             <img src="assests/img/icons8-mysql-48.png" alt="Mysql" class="h-16 mx-8">
           </div>
-      
+         
           <div class="flex items-center px-4">
             <img src="assests/img/angular.svg" alt="Angular" class="h-16 mx-8">
             <img src="assests/img/css.svg" alt="CSS" class="h-16 mx-8">
@@ -136,7 +142,7 @@
       <span class="text-blue-400">//</span> Proyectos
     </h2>
     
-    
+   
     <div class="flex flex-wrap justify-center gap-4 mb-12">
       <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white cursor-pointer" data-filter="all">
         Todos
@@ -156,7 +162,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="web">
         <img src="https://via.placeholder.com/400x200" alt="E-commerce" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">E-commerce React</h3>
@@ -175,7 +180,6 @@
         </div>
       </div>
 
-      
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="ai">
         <img src="assests/img/imagen-chatbot.png" alt="Chatbot" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">Chatbot IA</h3>
@@ -194,7 +198,6 @@
         </div>
       </div>
 
-  
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="games">
         <img src="assests/img/snake.png" alt="Juego" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">Snake</h3>
@@ -253,10 +256,6 @@
   </button>
 </form>
 
-<br><br>
-
-
-
   <footer class="py-8 px-6 bg-gray-900/50">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-400 mb-4 md:mb-0">© 2025 Ignacio. Todos los derechos reservados.</p>
@@ -268,9 +267,11 @@
     </div>
   </footer>
 
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assests/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
   <script src="assests/js/teminal.js"></script>
+
 </body>
 </html>
