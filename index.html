@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ignacio | Portfolio Programador</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assests/css/css.css">
@@ -19,38 +19,76 @@
 
 <body class="min-h-screen" class="snap-y snap-mandatory overflow-y-scroll h-screen">
 
+ 
+<nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 py-4 px-6 shadow-lg">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+   
+    <a href="https://ignacioglsd.github.io/portfolio/#" class="text-2xl font-bold text-blue-400 neon-text">Ignacio</a>
 
-  <nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 py-4 px-6 shadow-lg">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-blue-400 neon-text">Ignacio</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="hover:text-blue-400 transition">Sobre mí</a>
-        <a href="#skills" class="hover:text-blue-400 transition">Habilidades</a>
-        <a href="#projects" class="hover:text-blue-400 transition">Proyectos</a>
-        <a href="#contact" class="hover:text-blue-400 transition">Contacto</a>
-      </div>
-     
-<div class="flex items-center gap-4">
-  <a id="lang-flag" href="#" title="Idioma actual">
-    <img id="flag-icon" src="" alt="Idioma" class="w-6 h-4 rounded shadow-sm">
-  </a>
+    <div class="hidden md:flex space-x-8">
+      <a href="#about" class="hover:text-blue-400 transition">Sobre mí</a>
+      <a href="#skills" class="hover:text-blue-400 transition">Habilidades</a>
+      <a href="#projects" class="hover:text-blue-400 transition">Proyectos</a>
+      <a href="#contact" class="hover:text-blue-400 transition">Contacto</a>
+    </div>
 
-  <button id="toggle-dark" class="text-white hover:text-blue-400">
-    <i class="fas fa-moon"></i>
+    <div class="flex items-center gap-4">
+  
+<button id="modoOscuro">
+  <span id="iconoSol">☀️</span>
+  <span id="iconoLuna">🌙</span>
+</button>
+
+  <div class="relative inline-block z-50 group">
+  
+  <button
+    id="flag-toggle"
+    class="flex items-center gap-1 p-1 rounded-full bg-gradient-to-tr from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 transition-all duration-300 shadow-xl ring-1 ring-white/10"
+  >
+    <img
+      id="flag-current"
+      src="assests/img/icons8-circular-españa-48.png"
+      alt="Idioma actual"
+      class="w-8 h-8 rounded-full transition-transform duration-300 group-hover:scale-110"
+    />
+    <svg
+      id="flag-arrow"
+      class="w-4 h-4 text-white transition-transform duration-300"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
   </button>
+
+  <div
+    id="flag-dropdown"
+    class="absolute top-full left-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg opacity-0 invisible transition-all duration-300 p-2 w-12"
+  >
+    <a
+      id="flag-other"
+      href="/en/index.html"
+      title="Cambiar idioma"
+      class="block hover:scale-110 transition-transform duration-300"
+    >
+      <img
+        id="flag-other-img"
+        src="assests/img/icons8-circular-de-gran-bretaña-48.png"
+        alt="Cambiar idioma"
+        class="w-8 h-8 rounded-full"
+      />
+    </a>
+  </div>
 </div>
 
 
-  <i class="fas fa-moon"></i>
-</button>
 
-      <button class="md:hidden text-xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
+</div>
 
+</nav>
 
+  
   <section class="pt-32 pb-20 px-6 text-center">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-5xl md:text-7xl font-bold mb-4">
@@ -62,10 +100,11 @@
       <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
         Contáctame
       </a>
-      <br>   
+      <br>
+      
   </section>
 
-<section id="about" class="py-32 px-6 relative z-10 text-blue-200 font-mono" data-aos="fade-up">
+<section id="about" class="py-32 px-6 relative z-10 text-blue-200 font-mono " data-aos="fade-up">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
 
     <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-400 glitch-container shrink-0">
@@ -97,10 +136,13 @@
 
 
 
-  <section class="py-12" data-aos="fade-up">
+
+
+
+  <section class="py-12" data-aos="fade-up" id="skills">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl font-bold mb-8 text-center text-blue-400">
-        Tecnologías que domino
+        // Tecnologías que domino
       </h2>
       
       <div class="logos-wrapper">
@@ -118,7 +160,7 @@
             <img src="assests/img/icons8-python-94.png" alt="PHP" class="h-16 mx-8">
             <img src="assests/img/icons8-mysql-48.png" alt="Mysql" class="h-16 mx-8">
           </div>
-         
+          
           <div class="flex items-center px-4">
             <img src="assests/img/angular.svg" alt="Angular" class="h-16 mx-8">
             <img src="assests/img/css.svg" alt="CSS" class="h-16 mx-8">
@@ -143,7 +185,7 @@
       <span class="text-blue-400">//</span> Proyectos
     </h2>
     
-   
+  
     <div class="flex flex-wrap justify-center gap-4 mb-12">
       <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white cursor-pointer" data-filter="all">
         Todos
@@ -162,9 +204,27 @@
       </button>
     </div>
 
+  
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="ai">
+        <img src="assests/img/_2ad0fb93-0ee3-4287-8f90-78a750a98a52.jpg" alt="Chatbot" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-bold mb-2">Chatbot IA</h3>
+        <p class="text-gray-300 mb-4">Asistente virtual con procesamiento de lenguaje natural.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
+          <span class="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">LangChain + LLM</span>
+        </div>
+        <div class="flex gap-3 mt-auto">
+          <a href="incoming.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+            Take a Look
+          </a>
+          <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+            Ver Código
+          </a>
+        </div>
+      </div>
      
-      
       <div class="project-card bg-gray-800 rounded-xl p-6 card-hover" data-category="web">
         <img src="assests/img/_a9177e56-f6bf-41b2-9df4-3930e585c4fb.jpg" alt="E-commerce" class="rounded-lg mb-4 w-full h-48 object-cover">
         <h3 class="text-xl font-bold mb-2">E-commerce con Shopify</h3>
@@ -191,10 +251,10 @@
           <span class="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">TensorFlow</span>
         </div>
         <div class="flex gap-3 mt-auto">
-          <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+          <a href="https://ignacioglsd.github.io/chatbot-/#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
             Take a Look
           </a>
-          <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+          <a href="https://github.com/Ignacioglsd/chatbot-" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
             Ver Código
           </a>
         </div>
@@ -205,14 +265,15 @@
         <h3 class="text-xl font-bold mb-2">Snake</h3>
         <p class="text-gray-300 mb-4">Juego 2D</p>
         <div class="flex flex-wrap gap-2 mb-4">
-          <span class="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">C#</span>
-          <span class="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">Unity</span>
+          <span class="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">HTML</span>
+          <span class="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">CSS</span>
+          <span class="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">javascript</span>
         </div>
         <div class="flex gap-3 mt-auto">
-          <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+          <a href="https://ignacioglsd.github.io/snake/" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
             Take a Look
           </a>
-          <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+          <a href="https://github.com/Ignacioglsd/snake" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
             Ver Código
           </a>
         </div>
@@ -221,7 +282,7 @@
   </div>
 </section>
 
-  <form class="max-w-md mx-auto space-y-6 bg-gray-900/50 backdrop-blur-md p-8 rounded-xl border border-blue-500/20 shadow-lg">
+  <form class="max-w-md mx-auto space-y-6 bg-gray-900/50 backdrop-blur-md p-8 rounded-xl border border-blue-500/20 shadow-lg" id="contact">
   <div class="relative">
     <input type="text" id="nombre" name="nombre" required
       class="peer w-full bg-transparent border-b-2 border-blue-500 text-white placeholder-transparent focus:outline-none focus:border-blue-300 transition-all py-3"
@@ -258,6 +319,18 @@
   </button>
 </form>
 
+<br><br>
+
+<div class="whatsapp-container">
+  <a href="https://wa.me/+34639359652" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat por WhatsApp">
+    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366">
+      <path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.15 1.6 5.95L0 24l6.4-1.66a11.92 11.92 0 005.6 1.42c6.63 0 12-5.37 12-12a11.77 11.77 0 00-3.48-8.28zM12 21.6a9.54 9.54 0 01-4.86-1.35l-.35-.21-3.8.99.98-3.7-.23-.37a9.57 9.57 0 0115.1-12.64 9.48 9.48 0 01-6.74 15.58zm5.18-7.22c-.28-.14-1.64-.81-1.9-.9-.26-.1-.44-.14-.63.14s-.72.9-.89 1.09c-.17.18-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.37-1.63-1.53-1.9-.16-.27-.02-.41.12-.55.12-.12.28-.31.43-.46.14-.15.18-.26.28-.43.1-.17.05-.32-.03-.46-.08-.14-.63-1.5-.86-2.05-.23-.54-.46-.46-.63-.47-.16-.01-.35-.01-.54-.01-.18 0-.47.07-.72.35-.26.28-1 1-1 2.44s1.03 2.83 1.17 3.03c.14.2 2.02 3.09 4.9 4.33.68.29 1.21.46 1.62.59.68.21 1.3.18 1.79.11.55-.08 1.64-.67 1.87-1.32.23-.64.23-1.19.16-1.32-.07-.13-.26-.2-.54-.35z"/>
+    </svg>
+    <span class="whatsapp-saludo">Contacta conmigo</span>
+  </a>
+</div>
+
+
   <footer class="py-8 px-6 bg-gray-900/50">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-400 mb-4 md:mb-0">© 2025 Ignacio. Todos los derechos reservados.</p>
@@ -269,11 +342,12 @@
     </div>
   </footer>
 
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assests/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
   <script src="assests/js/teminal.js"></script>
   <script src="assests/js/idioma.js"></script>
+  <script src="assests/js/modo-oscuro.js"></script>
+
 </body>
 </html>
