@@ -1,7 +1,7 @@
 const input = document.getElementById("terminal-input");
 const output = document.getElementById("terminal-output");
 
-// Texto inicial de la terminal (con clases azules)
+
 const initialTerminalContent = `
 <div class="text-blue-300">> [BOOTING SEQUENCE...]</div>
 <div class="text-blue-200">> User: Ignacio González</div>
@@ -11,7 +11,6 @@ const initialTerminalContent = `
 <div class="text-blue-300">> Si quieres saber más, escribe <span class="text-white">help</span>.</div>
 `;
 
-// Establecer contenido inicial
 output.innerHTML = initialTerminalContent;
 
 input.addEventListener("keydown", function(e) {
