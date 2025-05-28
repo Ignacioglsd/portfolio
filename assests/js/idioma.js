@@ -7,11 +7,11 @@ const isEnglish = window.location.pathname.startsWith("/en");
   const toggleBtn = document.getElementById("flag-toggle");
   const arrow = document.getElementById("flag-arrow");
 
-  if (isEnglish) {
-    currentImg.src = "/assets/img/icons8-circular-de-gran-bretaña-48.png";
-    otherImg.src = "/assets/img/icons8-circular-españa-48.png";
-    otherLink.href = "/index.html";
-  }
+ // if (isEnglish) {
+ //   currentImg.src = "/assets/img/icons8-circular-de-gran-bretaña-48.png";
+  //  otherImg.src = "/assets/img/icons8-circular-españa-48.png";
+   // otherLink.href = "/index.html";
+ // }
 
   toggleBtn.addEventListener("click", () => {
     dropdown.classList.toggle("opacity-0");
