@@ -1,4 +1,4 @@
-body {
+ body {
       font-family: 'Share Tech Mono', monospace;
       background-color: #0f172a;
       color: #e2e8f0;
@@ -22,7 +22,6 @@ body {
 }
 
 
-/* Estilos para la terminal azul */
 #terminal-output div {
   font-family: 'Share Tech Mono', monospace;
   margin-bottom: 0.5rem;
@@ -33,7 +32,7 @@ body {
 }
 
 #about {
-  background: rgba(15, 23, 42, 0.3); /* azul oscuro translúcido */
+  background: rgba(15, 23, 42, 0.3); 
   backdrop-filter: blur(1px);
   
   
@@ -41,19 +40,18 @@ body {
 
 
 
-/* Configuración clave para el efecto infinito perfecto */
+
 .logos-grid {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min-content; /* Ancho ajustado al logo */
-  gap: 4rem; /* Espacio entre logos */
+  grid-auto-columns: min-content; 
+  gap: 4rem; 
   position: absolute;
   left: 0;
   top: 0;
 }
 
 
-/* Estilos para los botones de filtro */
 
 .project-card {
   perspective: 1000px;
@@ -69,13 +67,11 @@ body {
   font-weight: 600;
 }
 
-/* Efecto hover para tarjetas */
 .card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
 }
 
-/* Botones de proyecto */
 .project-card a {
   transition: transform 0.2s;
 }
@@ -158,10 +154,73 @@ body {
 }
 
 
-.dark body {
-  background-color: #020617;
-  color: #f1f5f9;
+
+
+body.modo-oscuro {
+  background-color: #121212;
+  color: #eee;
 }
-.dark .project-card {
-  background-color: #1e293b;
+
+#iconoLuna {
+  display: none;
 }
+
+   .whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+
+  .whatsapp-btn {
+    position: relative;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.6);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: visible;
+  }
+
+  .whatsapp-btn:hover {
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.9);
+    transform: scale(1.1);
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+
+  .whatsapp-saludo {
+    position: absolute;
+    bottom: 70px; 
+    right: 0;
+    background-color: #25D366;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    white-space: nowrap;
+    user-select: none;
+    z-index: 10;
+  }
+
+  .whatsapp-btn:hover .whatsapp-saludo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
