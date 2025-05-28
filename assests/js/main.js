@@ -1,6 +1,6 @@
 // Configuración de Swiper (asegúrate de tener el CSS y JS de Swiper cargados)
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializar Swiper solo si existe el contenedor
+
   if (document.querySelector('.swiper-container')) {
     const swiper = new Swiper('.swiper-container', {
       loop: true,
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Animaciones al hacer scroll
   document.querySelectorAll('section').forEach((section) => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Filtrado de proyectos (versión simplificada y unificada)
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -50,22 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filterButtons.length && projectCards.length) {
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Remover clases activas
+   
         filterButtons.forEach(btn => {
           btn.classList.remove('active', 'bg-blue-600');
           btn.classList.add('bg-gray-700');
         });
         
-        // Activar botón clickeado
         button.classList.add('active', 'bg-blue-600');
         button.classList.remove('bg-gray-700');
         
-        // Filtrar proyectos
         filterProjects(button.dataset.filter);
       });
     });
     
-    // Inicializar mostrando todos los proyectos
     filterProjects('all');
     document.querySelector('.filter-btn[data-filter="all"]')?.classList.add('active', 'bg-blue-600');
   }
@@ -118,5 +113,16 @@ setInterval(drawMatrix, 33);
 
 
 
-
 });
+
+const character = document.getElementById('whatsappCharacter');
+
+  function toggleSaludo() {
+    character.classList.add('show');
+    setTimeout(() => {
+      character.classList.remove('show');
+    }, 3000);
+  }
+
+  toggleSaludo();
+  setInterval(toggleSaludo, 6000);
